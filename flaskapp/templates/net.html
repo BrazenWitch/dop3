@@ -21,6 +21,7 @@
   <td width=100px>{{ form.green.label(form.green) }}</td>
   <td width=100px>{{ form.blue.label(form.blue) }}</td></tr></table>
 <br>
+<font size="3">
 <table align="center" border="1">
 <tr width=800px><td width=300px>
 {% if old_img %}
@@ -39,14 +40,14 @@
 <tr width=700px><td width=300px>
 {% if vertgr %}
   <br><p align="center"><img src={{vertgr}}></p>
-  <p align="center">Color average vert {{vertgr}}</p>
+  <font size="3"><p align="center">Color average vert {{vertgr}}</p></font>
 {% else %}
   <br><p align="center"> There is no image yet </p><br>
 {% endif %}
 </td><td width=300px>
 {% if horizgr %}
   <br><p align="center"><img src={{horizgr}}/>
-  <p align="center">Color average horiz {{horizgr}}</p>
+  <font size="3"><p align="center">Color average horiz {{horizgr}}</p></font>
 {% else %}
   <br><p align="center"> There is no image yet </p>
 {% endif %}
@@ -65,4 +66,5 @@
 </table>
 <br>
 <p align="center">{{form.submit}}</p></form>
+</font>
 {% endblock %}
