@@ -33,20 +33,17 @@ Original image
 {% endif %}
 </td><td width=300px>
 {% if image_name %}
-<p>{{image_name}}
-New image
-</p>
-<p><img src={{image_name}}></p>
+  <p align="center"><img src={{image_name}}></p>
+  <p align="center">New image {{image_name}}</p>
 {% else %}
-<p> There is no image yet </p>
+  <p align="center"> There is no image yet </p>
 {% endif %}</td></tr>
 <tr width=700px><td width=300px>
 {% if vertgr %}
-<p>{{vertgr}}
-Color average vert</p>
-<p><img src={{vertgr}}></p>
+  <p align="center">Color average vert {{vertgr}}</p>
+  <p align="center"><img src={{vertgr}}></p>
 {% else %}
-<p> There is no image yet </p>
+  <p> There is no image yet </p>
 {% endif %}
 </td><td width=300px>
 {% if horizgr %}
