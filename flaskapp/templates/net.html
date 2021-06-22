@@ -26,7 +26,7 @@
 <tr width=800px><td width=300px>
 {% if old_img %}
   <br><p align="center"><img src={{old_img}}/>
-  <font size="3"><p align="center">Original image {{old_img}}</p></font>
+  <p align="center">Original image {{old_img}}</p>
 {% else %}
   <br><p align="center"> There is no image yet </p><br>
 {% endif %}
@@ -40,14 +40,14 @@
 <tr width=700px><td width=300px>
 {% if vertgr %}
   <br><p align="center"><img src={{vertgr}}></p>
-  <font size="3"><p align="center">Color average vert {{vertgr}}</p></font>
+  <p align="center">Color average vert {{vertgr}}</p>
 {% else %}
   <br><p align="center"> There is no image yet </p><br>
 {% endif %}
 </td><td width=300px>
 {% if horizgr %}
   <br><p align="center"><img src={{horizgr}}/>
-  <font size="3"><p align="center">Color average horiz {{horizgr}}</p></font>
+  <p align="center">Color average horiz {{horizgr}}</p>
 {% else %}
   <br><p align="center"> There is no image yet </p>
 {% endif %}
@@ -57,7 +57,7 @@
 <tr width=700px><td>
 {% if gr_name %}
   <br><p><img src={{gr_name}}/>
-  <font size="3"><p align="center" font-size="200%">Color map {{gr_name}} </p></font><br>
+  <p align="center" font-size="200%">Color map {{gr_name}} </p><br>
 {% else %}
   <br><p align="center"> There is no image yet </p><br>
 {% endif %}
