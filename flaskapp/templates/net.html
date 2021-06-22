@@ -24,49 +24,41 @@
 <table cellspacing="20" align="center" border="1">
 <tr width=800px><td width=300px>
 {% if old_img %}
-  <br>
-  <p align="center"><img src={{old_img}}/>
-  <p align="center">Original image {{old_img}}</p>
-  <br>
+  <br><p align="center"><img src={{old_img}}/>
+  <p align="center">Original image {{old_img}}</p><br>
 {% else %}
-  <br>
-  <p align="center"> There is no image yet </p>
-  <br>
+  <br><p align="center"> There is no image yet </p><br>
 {% endif %}
 </td><td width=300px>
 {% if image_name %}
-  <br>
-  <p align="center"><img src={{image_name}}></p>
-  <p align="center">New image {{image_name}}</p>
-  <br>
+  <br><p align="center"><img src={{image_name}}></p>
+  <p align="center">New image {{image_name}}</p><br>
 {% else %}
-  <br>
-  <p align="center"> There is no image yet </p>
-  <br>
+  <br><p align="center"> There is no image yet </p><br>
 {% endif %}</td></tr>
 <tr width=700px><td width=300px>
 {% if vertgr %}
-  <p align="center"><img src={{vertgr}}></p>
-  <p align="center">Color average vert {{vertgr}}</p>
+  <br><p align="center"><img src={{vertgr}}></p>
+  <p align="center">Color average vert {{vertgr}}</p><br>
 {% else %}
-  <p align="center"> There is no image yet </p>
+  <br><p align="center"> There is no image yet </p><br>
 {% endif %}
 </td><td width=300px>
 {% if horizgr %}
-  <p align="center"><img src={{horizgr}}/>
-  <p align="center">Color average horiz {{horizgr}}</p>
+  <br><p align="center"><img src={{horizgr}}/>
+  <p align="center">Color average horiz {{horizgr}}</p><br>
 {% else %}
-  <p align="center"> There is no image yet </p>
+  <br><p align="center"> There is no image yet </p><br>
 {% endif %}
 </td>
 </table>
 <table align="center">
 <tr width=700px><td>
 {% if gr_name %}
-  <p><img src={{gr_name}}/>
-  <p align="center" font-size=20pt>Color map {{gr_name}} </p>
+  <br><p><img src={{gr_name}}/>
+  <p align="center" font-size=20pt>Color map {{gr_name}} </p><br>
 {% else %}
-  <p align="center"> There is no image yet </p>
+  <br><p align="center"> There is no image yet </p><br>
 {% endif %}
 </td>
 </tr>
