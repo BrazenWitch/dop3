@@ -1,1 +1,77 @@
-
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+<!-- задаем заголовок страницы -->
+{% block title %}This is an page{% endblock %}
+<!-- блок body -->
+{% block scripts %}
+{{ super() }}
+{{ colorpicker.loader() }}
+{{ colorpicker.picker(ids=['#red', '#green', '#blue']) }}
+{% endblock %}
+{% block content %}
+<form action="" method="post"
+  class="form" enctype="multipart/form-data" role="form">
+{{ form.hidden_tag() }}
+  <table align=center><tr><td>{{ form.recaptcha.label(form.recaptcha) }}</tr></td></table>
+  <br>
+  <table align=center>
+  <tr>
+  <td width=100px>{{ form.upload.label(form.upload) }}</td>
+  <td width=100px>{{ form.red.label(form.red) }}</td>
+  <td width=100px>{{ form.green.label(form.green) }}</td>
+  <td width=100px>{{ form.blue.label(form.blue) }}</td></tr></table>
+<br>
+<table align="center" border="1">
+<tr width=800px><td width=300px>
+{% if old_img %}
+<p>{{old_img}}
+Original image
+</p>
+<p><img src={{old_img}}/>
+{% else %}
+<p> There is no image yet </p>
+{% endif %}
+</td><td width=300px>
+{% if image_name %}
+<p>{{image_name}}
+New image
+</p>
+<p><img src={{image_name}}></p>
+{% else %}
+<p> There is no image yet </p>
+{% endif %}</td></tr>
+<tr width=700px><td width=300px>
+{% if vertgr %}
+<p>{{vertgr}}
+Color average vert</p>
+<p><img src={{vertgr}}></p>
+{% else %}
+<p> There is no image yet </p>
+{% endif %}
+</td><td width=300px>
+{% if horizgr %}
+<p>{{horizgr}}
+Color average horiz</p>
+<p><img src={{horizgr}}/>
+{% else %}
+<p> There is no image yet </p>
+{% endif %}
+</td>
+</table>
+<table align="center">
+<tr width=700px><td>
+{% if gr_name %}
+<p>{{gr_name}}
+Color map</p>
+<p><img src={{gr_name}}/>
+{% else %}
+<p> There is no image yet </p>
+{% endif %}
+</td>
+</tr>
+</table>
+<br>
+<p align="center">
+{{form.submit}}
+</p></form>
+{% endblock %}
